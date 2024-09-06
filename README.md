@@ -37,16 +37,15 @@ Non-Agricultural Activities:
     Subtotal: Non-Agricultural Activities: Aggregates the non-agricultural activities.
 3. Target Variable:   
  Total: Represents the total contribution from all activities
+
 Model Training and Regularization Techniques:
 Initially, a Linear Regression model was trained utilizing a variety of parameters associated with both agricultural and non-agricultural activities in order to predict the target variable (Total). The disparity between the training and test performance measures indicates that this model overfitted despite performing very flawlessly on the training set.
 
 1. The Linear Regression Method
-Training Results:
-The mean absolute error, or MAE, is 2.03e-08, or nearly zero.
-The mean square error, or MSE, is 9.38e-16, or nearly zero.
-R-squared: 1.0, or an ideal match
-Test Results: MSE: 3,563,431,481.14; MAE: 50,452.16
-9999982061520049 is the R-squared.
-An R-squared of 1.0 indicates that the Linear Regression model overfits the data, capturing noise and patterns unique to the training set instead of adapting effectively to new, unknown data. However, the model did fit the training data flawlessly.
-
-2. Linear Regression
+The Linear Regression method was tested with a mean absolute error of 2.03e-08 and a mean square error of 9.38e-16, indicating that the model overfits the training data, capturing unique patterns instead of adapting effectively to new data.
+2. Ridge Regression (L2 Regularization):
+   Ridge Regression (L2 regularization) reduces overfitting by shrinking coefficients, making the model less complex. It slightly reduces R-squared value compared to Linear Regression, promoting trade-off between bias and variance.
+3. Lasso Regression (L1 Regularization):
+   Lasso Regression (L1 regularization) reduces overfitting and performs feature selection by adding a penalty to coefficients' absolute values. It achieves high R-squared values and potentially simplifies the model.
+Results and Conclusions
+   Linear Regression performed well on training data but showed overfitting. Ridge Regression reduced overfitting by applying L2 regularization and feature selection, making the model more robust to unseen data.
